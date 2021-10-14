@@ -4,11 +4,15 @@ call plug#begin('~/.vim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vim-airline/vim-airline'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-Plug 'joshdick/onedark.vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'sheerun/vim-polyglot'
+Plug 'ryanoasis/vim-devicons'
+Plug 'glepnir/dashboard-nvim'
 " Initialize plugin system
 call plug#end()
+set number
 set noswapfile
 inoremap jk <ESC>
 " vim-prettier
@@ -17,25 +21,33 @@ inoremap jk <ESC>
 " prettier command for coc
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 " run prettier on save
-"let g:prettier#autoformat = 0
-
+let g:prettier#autoformat = 0
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#formatter = 'unique_tail'
 " j/k will move virtual lines (lines that wrap)
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
-
-set relativenumber
-
 set smarttab
 set cindent
 set tabstop=2
 set shiftwidth=2
 " always uses spaces instead of tab characters
 set expandtab
-if has('nvim') || has('termguicolors')
-          set termguicolors
-  endif
+if (empty($TMUX))
+	  if (has("nvim"))
+		      let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+	   endif
+	   if (has("termguicolors"))
+		       set termguicolors
+	   endif
+endif
+let g:dracula_colorterm = 0
+let g:dracula_italic = 0
 syntax on
-colorscheme onedark
+colorscheme dracula
+let g:airline_theme='dracula'
 " coc config
 let g:coc_global_extensions = [
   \ 'coc-snippets',
@@ -163,5 +175,7 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+let g:dashboard_default_executive ='fzf'
+let $FZF_DEFAULT_COMMAND = 'rg --files'
 nmap <C-P> :FZF<CR>
-nmap <C-S> :Prettier<CR>
+
