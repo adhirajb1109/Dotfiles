@@ -12,4 +12,5 @@
    - Nvim
    - Ripgrep
    - FZF
+   - Powerlevel10K
 ## I ❤ Linux
