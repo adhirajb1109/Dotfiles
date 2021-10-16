@@ -1,9 +1,9 @@
 # Dotfiles
-## Here are my dotfiles for WSL2 🎉 -
-    .zshrc
-    .hyper.js
-    .tmux.conf
-    init.vim
+## Here are my dotfiles for WSL2 containing - 
+   - .zshrc
+   - .hyper.js
+   - .tmux.conf
+   - init.vim
 ## I use the following tools to enhance my terminal experience -
    - ZSH
    - Bat
