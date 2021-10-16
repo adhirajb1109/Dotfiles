@@ -4,6 +4,7 @@
    - .hyper.js
    - .tmux.conf
    - init.vim
+   - .p10k.zsh
 ## I use the following tools to enhance my terminal experience -
    - ZSH
    - Bat
