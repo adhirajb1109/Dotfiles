@@ -18,6 +18,7 @@ call plug#end()
 set nocompatible
 set noshowmode
 set number
+set t_Co=256
 set nobackup
 set noswapfile
 set noundofile
@@ -43,4 +44,3 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 " Mapppings
 nnoremap <C-P> :Files<CR>
 nnoremap <C-B> :Buffers<CR>
-
