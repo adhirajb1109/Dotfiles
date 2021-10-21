@@ -13,4 +13,5 @@
    - Ripgrep
    - FZF
    - Powerlevel10K
+   - Ranger
 ## I ❤ Linux
