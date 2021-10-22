@@ -34,7 +34,8 @@ let g:coc_global_extensions = [
   \ 'coc-prettier',
   \ 'coc-json',
   \ 'coc-pyright',
-  \ 'coc-emmet'
+  \ 'coc-emmet',
+  \ 'coc-java'
   \ ]
 " Status Line Configuration
 let g:airline#extensions#tabline#enabled = 1
