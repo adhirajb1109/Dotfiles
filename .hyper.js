@@ -8,13 +8,13 @@ module.exports = {
         // or `'canary'` for less polished but more frequent updates
         updateChannel: 'stable',
         // default font size in pixels for all tabs
-        fontSize: 17,
+        fontSize: 16,
         // font family with optional fallbacks
-        fontFamily: 'SauceCodePro NF',
+        fontFamily: 'Hurmit Nerd Font',
         // default font weight: 'normal' or 'bold'
         fontWeight: 'normal',
         // font weight for bold characters: 'normal' or 'bold'
-        lineHeight: 1.5,
+        lineHeight: 2,
         // letter spacing as a relative unit
         letterSpacing: 1,
         // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
