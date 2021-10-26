@@ -12,6 +12,6 @@
    - Nvim
    - Ripgrep
    - FZF
-   - Powerlevel10K
+   - Starship
    - Ranger
 ## I ❤ Linux
