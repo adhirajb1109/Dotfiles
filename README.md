@@ -1,17 +1,12 @@
 # Dotfiles
-## Here are my dotfiles for WSL2 containing - 
-   - .zshrc
-   - .hyper.js
-   - .tmux.conf
-   - init.vim
-   - .p10k.zsh
+## Here are my dotfiles for Ubuntu containing my personalised config . 
 ## I use the following tools to enhance my terminal experience -
-   - ZSH
+   - Fish
    - Bat
    - Exa
-   - Nvim
+   - Vim
    - Ripgrep
-   - FZF
+   - Fzf
    - Starship
    - Ranger
 ## I ❤ Linux
