@@ -1,10 +1,11 @@
 " Initialise Plugin Manager
 call plug#begin('~/.vim/autoload')
-" Theme
-Plug 'joshdick/onedark.vim'
+" Themes
+Plug 'arcticicestudio/nord-vim' " Nord Theme
+Plug 'joshdick/onedark.vim' " One Dark Theme
+Plug 'dracula/vim', {'as': 'dracula'} " Dracula Theme
 " Syntax Highlighting
 Plug 'sheerun/vim-polyglot'
-Plug 'uiiaoo/java-syntax.vim'
 " Auto Completetion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Statusline
@@ -17,7 +18,7 @@ Plug 'junegunn/fzf.vim'
 " Start Screen
 Plug 'mhinz/vim-startify'
 " File Explorer
-Plug 'francoiscabrol/ranger.vim'
+Plug 'preservim/nerdtree'
 call plug#end()
 " Vim Configuration
 set nocompatible
@@ -28,19 +29,19 @@ set noswapfile
 set noundofile
 " Theme Configuration
 set termguicolors
-colorscheme onedark
+colorscheme nord
 " Auto Completion Configuration
 let g:coc_global_extensions = [
   \ 'coc-snippets',
   \ 'coc-pairs',
-  \ 'coc-tsserver',
-  \ 'coc-css',
-  \ 'coc-html',
-  \ 'coc-eslint',
   \ 'coc-prettier',
-  \ 'coc-json',
-  \ 'coc-pyright',
   \ 'coc-emmet',
+  \ 'coc-html',
+  \ 'coc-css',
+  \ 'coc-tailwindcss',
+  \ 'coc-tsserver',
+  \ 'coc-graphql',
+  \ 'coc-pyright',
   \ 'coc-java'
   \ ]
 " Status Line Configuration
@@ -48,17 +49,9 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#formatter = 'unique_tail'
-" Start Screen Configuration
-let g:startify_custom_header = [
-      \ ' ███╗   ██╗ ███████╗ ██████╗  ██╗   ██╗ ██╗ ███╗    ██╗',
-      \ ' ████╗  ██║ ██╔════╝██╔═══██╗ ██║   ██║ ██║ ████╗ ████║',
-      \ ' ██╔██╗ ██║ █████╗  ██║   ██║ ██║   ██║ ██║ ██╔████╔██║',
-      \ ' ██║╚██╗██║ ██╔══╝  ██║   ██║ ╚██╗ ██╔╝ ██║ ██║╚██╔╝██║',
-      \ ' ██║ ╚████║ ███████╗╚██████╔╝  ╚████╔╝  ██║ ██║ ╚═╝ ██║',
-      \ ' ╚═╝  ╚═══╝ ╚══════╝ ╚═════╝    ╚═══╝   ╚═╝ ╚═╝     ╚═╝',
-      \]
-let g:startify_enable_special = 0
+" Fuzzy Finder Configuration
+let g:fzf_preview_window = ['right:hidden', 'ctrl-/']
 " Mapppings
 nnoremap <C-P> :Files<CR>
 nnoremap <C-B> :Buffers<CR>
-nnoremap <C-F> :Ranger<CR>
+nnoremap <C-F> :NERDTreeToggle<CR>
