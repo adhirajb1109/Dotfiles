@@ -1,7 +1,8 @@
 # Dotfiles
-## Here are my dotfiles for Linux containing my personalised config . 
+## Here are my dotfiles for WSL & Windows containing my personalised config . 
 ## I use the following tools to enhance my terminal experience -
    - Windows Terminal
+   - PowerShell
    - Fish
    - Bat
    - Exa
