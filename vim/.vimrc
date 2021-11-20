@@ -1,9 +1,7 @@
 " Initialise Plugin Manager
 call plug#begin('~/.vim/autoload')
 " Themes
-Plug 'arcticicestudio/nord-vim' " Nord Theme
-Plug 'joshdick/onedark.vim' " One Dark Theme
-Plug 'dracula/vim', {'as': 'dracula'} " Dracula Theme
+Plug 'arcticicestudio/nord-vim'
 " Syntax Highlighting
 Plug 'sheerun/vim-polyglot'
 " Auto Completetion
@@ -19,11 +17,16 @@ Plug 'junegunn/fzf.vim'
 Plug 'mhinz/vim-startify'
 " File Explorer
 Plug 'preservim/nerdtree'
+" Tag Explorer
+Plug 'preservim/tagbar'
+" Git Integration
+Plug 'tpope/vim-fugitive'
 call plug#end()
 " Vim Configuration
 set nocompatible
 set noshowmode
 set number
+set splitbelow
 set nobackup
 set noswapfile
 set noundofile
@@ -53,5 +56,5 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:fzf_preview_window = ['right:hidden', 'ctrl-/']
 " Mapppings
 nnoremap <C-P> :Files<CR>
-nnoremap <C-B> :Buffers<CR>
 nnoremap <C-F> :NERDTreeToggle<CR>
+nnoremap <C-T> :TagbarToggle<CR>
