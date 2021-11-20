@@ -1,5 +1,5 @@
 # Dotfiles
-## Here are my dotfiles for Ubuntu containing my personalised config . 
+## Here are my dotfiles for Linux containing my personalised config . 
 ## I use the following tools to enhance my terminal experience -
    - Fish
    - Bat
@@ -8,5 +8,4 @@
    - Ripgrep
    - Fzf
    - Starship
-   - Ranger
 ## I ❤ Linux
