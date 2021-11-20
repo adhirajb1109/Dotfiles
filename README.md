@@ -11,4 +11,4 @@
    - [Ripgrep](https://github.com/BurntSushi/ripgrep)
    - [Fzf](https://github.com/junegunn/fzf)
    - [Starship](https://github.com/starship/starship)
-## I ❤ Linux
+## I ❤ Command Line !
