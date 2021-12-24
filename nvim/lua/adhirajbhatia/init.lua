@@ -1,0 +1,5 @@
+require('adhirajbhatia/telescope')
+require('adhirajbhatia/lualine')
+require('adhirajbhatia/nvim-tree')
+require('adhirajbhatia/bufferline')
+require('adhirajbhatia/treesitter')
