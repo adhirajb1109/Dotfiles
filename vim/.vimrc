@@ -17,10 +17,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'mhinz/vim-startify'
 " File Explorer
 Plug 'preservim/nerdtree'
-" Tag Explorer
-Plug 'preservim/tagbar'
-" Git Integration
-Plug 'tpope/vim-fugitive'
 call plug#end()
 " Vim Configuration
 set nocompatible
@@ -57,4 +53,3 @@ let g:fzf_preview_window = ['right:hidden', 'ctrl-/']
 " Mapppings
 nnoremap <C-P> :Files<CR>
 nnoremap <C-F> :NERDTreeToggle<CR>
-nnoremap <C-T> :TagbarToggle<CR>
